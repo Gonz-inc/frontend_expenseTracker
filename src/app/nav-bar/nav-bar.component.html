@@ -1,0 +1,40 @@
+
+<!-- src/app/navbar/navbar.component.html -->
+<mat-toolbar color="primary" class="navbar">
+    <!-- Menu Icon to toggle the sidebar -->
+    <button mat-icon-button (click)="toggleSidebar()" aria-label="Toggle sidebar">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <div class="logo-block">
+        <!-- Application title -->
+        <span class="app-title">SCRIBE</span>
+    </div>
+    <!-- Spacer to push content to the right -->
+    <span class="spacer"></span>
+  
+    <!-- Optional user profile or actions -->
+    <button mat-icon-button aria-label="User profile">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+</mat-toolbar>
+  
+<!-- Sidenav container for responsive layout -->
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar (Sidenav) -->
+  <mat-sidenav #sidenav mode="side" class="sidenav" [fixedInViewport]="true" fixedTopGap="64">
+    <mat-nav-list>      
+      <a mat-list-item routerLink="/index" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Home </a>
+      <a mat-list-item routerLink="/about" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> About </a>
+      <a mat-list-item routerLink="/planning" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Planning </a>
+      <a mat-list-item routerLink="/transactions" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Transactions </a>
+      <a mat-list-item routerLink="/Reward Points" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Reward Points </a>
+      <!-- Add more links as needed -->
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main content area where routed components will load -->
+  <mat-sidenav-content class="content">
+    <p>Test</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
