@@ -1,10 +1,1 @@
 <app-nav-bar></app-nav-bar>
-<div>
-  <h1>Transactions</h1>
-  <ul>
-    <li *ngFor="let transaction of transactions">
-      {{transaction.id}} - {{ transaction.descr }} - {{ transaction.amount }} - {{ transaction.date}} 
-      <button (click)="deleteTransaction(transaction.id)">Delete</button>
-    </li>
-  </ul>
-</div>

@@ -24,7 +24,7 @@
   <!-- Sidebar (Sidenav) -->
   <mat-sidenav #sidenav mode="side" class="sidenav" [fixedInViewport]="true" fixedTopGap="64">
     <mat-nav-list>      
-      <a mat-list-item routerLink="/index" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Home </a>
+      <a mat-list-item routerLink="" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Home </a>
       <a mat-list-item routerLink="/about" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> About </a>
       <a mat-list-item routerLink="/planning" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Planning </a>
       <a mat-list-item routerLink="/transactions" class="colorTest" (click)="closeSidebar()" routerLinkActive="active-link"> Transactions </a>
@@ -35,6 +35,6 @@
 
   <!-- Main content area where routed components will load -->
   <mat-sidenav-content class="content">
-    <p>Test</p>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

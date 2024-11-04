@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TransactionService, Transaction } from './transaction.service';
 import { NgFor } from '@angular/common';
+import { MatTableModule } from '@angular/material/table'
 
 @Component({
   selector: 'app-transaction',
   standalone: true,
-  imports: [],
-  providers: [TransactionService],
+  imports: [CommonModule, NgFor, MatTableModule],
+  providers: [TransactionService ],
   templateUrl: './transaction.component.html',
   styleUrl: './transaction.component.css'
 })
 export class TransactionComponent implements OnInit {
   title = 'expenseTracker';
+  displayColumns = ['id', 'date', 'amount', 'descr'];
   transactions: Transaction[] = [];
   newTransaction: Transaction = {id: 0, descr: '', amount: 0, date: ''};
 
